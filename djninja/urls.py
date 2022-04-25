@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from djninja.tracks.views import home
+from djninja.tracks.api import api
 
 urlpatterns = [
     path('', home),
+    path('api/', api.urls),
     path('admin/', admin.site.urls),
 ]
